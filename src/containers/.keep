@@ -1,0 +1,9 @@
+src/containers are the glue between the view and the model layer.
+If no state container is used src/store may not exist or may exist
+but in a different form. Either way container components are used
+to provide state to the view components themselves. With redux 
+a container component gets state from the store and maps it to 
+the view components props. Without Redux we may still have container
+components but they would be more simple components that provide 
+state via react local state and pass it down to other components.
+A container component can be used at any layer in the DOM tree.

@@ -1,0 +1,35 @@
+src/store is the model layer. It contains all of your actions, 
+selectors, and reducers (if we use Redux, of course). I also
+stick my relevant requests to APIs in a file called `endpoints`
+although we can call it whatever we'd like or do it elsewhere. 
+I also break state into domains that also mirror the state tree
+of the application as well
+
+
+```
+{
+  domain1: {...},
+  domain2: {...}
+}
+```
+
+The above is a result of domains that look like the following perhaps:
+
+src/store/domain1/actions.js
+src/store/domain1/selectors.js
+src/store/domain1/reducers.js
+src/store/domain1/endpoints.js
+
+Then I take all the state domains and marry them up into a single reducer in
+
+src/store/reducers.js
+
+and in src/store/index.js the store is created.
+
+Finally in 
+
+src/store/api.js
+
+I import all of my `endpoint.js` functions and put them in a single object.
+
+This was almost required with redux thunk but might not be with redux-observable.
