@@ -1,0 +1,15 @@
+src/components is a library of React components. I think of this directory
+as if I was building a third party component library. The components need
+to be sufficently generic to live in this directory and the interfaces 
+must be flexible enough to support multiple use cases. Put simply, 
+src/components is the view layer of the application.
+
+A typically component might look like:
+src/components/MyComponent/index.js
+src/components/MyComponent/MyComponent.jsx
+src/components/MyComponent/AnotherResource.svg
+src/components/MyComponent/styles.css
+
+or more simply
+
+src/components/MyComponent.jsx
